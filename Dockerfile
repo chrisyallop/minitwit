@@ -4,5 +4,5 @@ ADD . /usr/src/app
 WORKDIR /usr/src/app
 
 RUN mvn package
-
+EXPOSE 80
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/usr/src/app/target/minitwit.jar"]
